@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/90424325b2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="#" onclick="navigate('home')"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" onclick="navigate('profile')"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="navigate('settings')"><i class="fas fa-cogs"></i> Settings</a></li>
+            <li><a href="#" onclick="navigate('messages')"><i class="fas fa-envelope"></i> Messages</a></li>
+            <li><a href="#" onclick="navigate('notifications')"><i class="fas fa-bell"></i> Notifications</a></li>
+            <li><a href="#" onclick="navigate('logout')"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+        <div class="footer">
+            <p>&copy; 2024 Your Company</p>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <h1 class="heading">Welcome to the Dashboard</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius tenetur nisi. Inventore minus alias repellat magni sequi voluptas facilis fuga laborum ipsa sint vero ipsam impedit ullam, exercitationem animi.</div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+
+        function navigate(section) {
+            const content = document.getElementById('content');
+            switch (section) {
+                case 'home':
+                    content.innerHTML = `<h1>Home</h1><p>Welcome to home page!</p>`;
+                    break;
+                case 'profile':
+                    content.innerHTML = `<h1>Profile</h1><p>Manage your personal information and settings here.</p>`;
+                    break;
+                case 'settings':
+                    content.innerHTML = `<h1>Settings</h1><p>Customize your preferences and application settings.</p>`;
+                    break;
+                case 'messages':
+                    content.innerHTML = `<h1>Messages</h1><p>Check your latest messages and communications here.</p>`;
+                    break;
+                case 'notifications':
+                    content.innerHTML = `<h1>Notifications</h1><p>Stay updated with the latest alerts and updates.</p>`;
+                    break;
+                case 'logout':
+                    content.innerHTML = `<h1>Logout</h1><p>You have been logged out successfully.</p>`;
+                    break;
+                default:
+                    content.innerHTML = `<h1>Welcome</h1><p>Select an option from the sidebar to get started.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
